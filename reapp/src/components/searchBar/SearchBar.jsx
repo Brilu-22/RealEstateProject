@@ -44,7 +44,7 @@ function SearchBar() {
           placeholder="Max Price"
         />
         <button>
-          <img src="/search.svg" alt="" />
+          <img src="/locate.png" alt="" />
         </button>
       </form>
     </div>
