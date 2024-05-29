@@ -1,0 +1,51 @@
+.Home {
+  display: flex;
+  height: 100%;
+
+  .textcontainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      .title {
+        font-size: 54px;
+        font-weight: bolder;
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+          font-size: 26px;
+        }
+
+        h2 {
+          font-size: 15px;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+
+  .imgcontainer {
+    flex: 2;
+    background-color: rgba(42, 46, 8, 0.503);
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 115%;
+      position: absolute;
+      top: 50;
+      margin-left: -90px;
+    }
+  }
+}
