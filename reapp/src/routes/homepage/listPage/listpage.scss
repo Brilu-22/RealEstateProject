@@ -1,2 +1,21 @@
 .List {
+  display: flex;
+  height: 100%;
+}
+
+.listContainer {
+  flex: 3;
+
+  .wrapper {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    overflow-y: scroll;
+  }
+}
+
+.mapContainer {
+  flex: 2;
+  background-color: rgba(42, 46, 8, 0.503);
 }
