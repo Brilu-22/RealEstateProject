@@ -1,3 +1,4 @@
+import React from "react";
 import Filter from "../../../components/filter/Filter";
 import "./listpage.scss";
 import { listData } from "../../../lib/dummydata";
@@ -18,7 +19,7 @@ function ListPage() {
         </div>
       </div>
       <div className="mapContainer">
-        <Map />
+        <Map items={data} />
       </div>
     </div>
   );
