@@ -5,13 +5,31 @@
 
 .listContainer {
   flex: 3;
+  height: 100%;
 
   .wrapper {
+    height: 100%;
     padding-right: 50px;
     display: flex;
     flex-direction: column;
     gap: 50px;
     overflow-y: scroll;
+
+    /* Add some basic scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
   }
 }
 

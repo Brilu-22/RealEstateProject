@@ -78,7 +78,7 @@ function Filter() {
         </div>
 
         <button>
-          <img src="/locate.png" alt="" width={29} height={29} />
+          <img src="/search.png" alt="" />
         </button>
       </div>
     </div>
