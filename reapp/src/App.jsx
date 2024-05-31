@@ -5,6 +5,7 @@ import Home from "./routes/homepage/Home";
 import ListPage from "./routes/homepage/listPage/ListPage";
 import "./layout.scss";
 import SinglePage from "./routes/SinglePage/SinglePage";
+import Profile from "./routes/ProfilePage/Profile";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/list" component={ListPage} />
+            <Route path="/profile" component={Profile} />
             <Route path="/:id" component={SinglePage} />
           </Switch>
         </div>

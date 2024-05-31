@@ -1,0 +1,31 @@
+.profile {
+  display: flex;
+  height: 100%;
+
+  .details {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+    background-color: rgba(42, 46, 8, 0.503);
+    height: 100%;
+
+    .wrapper {
+      padding: 0px 20px;
+    }
+  }
+}

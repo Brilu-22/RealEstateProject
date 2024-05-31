@@ -13,11 +13,26 @@
         .top {
           display: flex;
           justify-content: space-between;
+
           .post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             h1 {
+              font-weight: 400;
             }
 
             .address {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              color: #888;
+              font-size: 14px;
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
             }
             .price {
               padding: 5px;
@@ -59,10 +74,104 @@
 
   .features {
     flex: 2;
-    background-color: #fcf5f3;
+    background-color: rgba(42, 46, 8, 0.503);
+    height: 100%;
 
     .wrapper {
       padding: 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          background-color: rgba(42, 46, 8, 0.503);
+        }
+
+        .featureText {
+          span {
+            font-weight: bold;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      .listHorizontal {
+        display: flex;
+        padding: 20px 10px;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+
+        .size {
+          display: flex;
+          align-items: center;
+          background-color: white;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+        background-color: rgba(42, 46, 8, 0.503);
+      }
+
+      .button {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(42, 46, 8, 0.503);
+
+        button {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          background-color: white;
+          border: 1px solid rgb(42, 46, 8);
+          border-radius: 5px;
+          cursor: pointer;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
     }
   }
 }
