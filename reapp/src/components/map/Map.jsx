@@ -1,4 +1,3 @@
-// src/Map.js
 import React, { useRef, useEffect, useState } from "react";
 import "ol/ol.css";
 import { Map as OLMap, View } from "ol";
@@ -15,6 +14,7 @@ function Map({ items }) {
   const mapRef = useRef();
   const [map, setMap] = useState(null);
   const popupRef = useRef();
+  const [selectedFeature, setSelectedFeature] = useState(null);
 
   useEffect(() => {
     const initialMap = new OLMap({
@@ -47,16 +47,12 @@ function Map({ items }) {
         (feature) => feature
       );
       if (feature) {
+        setSelectedFeature(feature);
         const coordinates = feature.getGeometry().getCoordinates();
         popupOverlay.setPosition(coordinates);
         popupRef.current.style.display = "block";
-        popupRef.current.innerHTML = `
-          <div style="padding: 10px; border-radius: 5px; background: white; border: 1px solid black;">
-            <p>A pretty CSS3 popup.</p>
-            <p>Easily customizable.</p>
-          </div>
-        `;
       } else {
+        setSelectedFeature(null);
         popupRef.current.style.display = "none";
       }
     });
@@ -84,6 +80,7 @@ function Map({ items }) {
 
         const marker = new Feature({
           geometry: new Point(coordinates),
+          address: response.data.results[0].formatted,
         });
 
         marker.setStyle(
@@ -127,10 +124,21 @@ function Map({ items }) {
   return (
     <div style={{ position: "relative" }}>
       <div ref={mapRef} style={{ width: "100%", height: "100vh" }} />
-      <div
-        ref={popupRef}
-        style={{ position: "absolute", display: "none" }}
-      ></div>
+      <div ref={popupRef} style={{ position: "absolute", display: "none" }}>
+        {selectedFeature && (
+          <div
+            style={{
+              padding: 10,
+              borderRadius: 5,
+              background: "white",
+              border: "1px solid black",
+            }}
+          >
+            <p>{selectedFeature.get("address")}</p>
+            {/* Add more properties or content as needed */}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

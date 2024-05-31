@@ -7,6 +7,33 @@
 
     .wrapper {
       padding-right: 50px;
+
+      .info {
+        .top {
+          display: flex;
+          justify-content: space-between;
+          .post {
+            h1 {
+            }
+
+            .address {
+            }
+            .price {
+            }
+          }
+
+          .user {
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+        .bottom {
+        }
+      }
     }
   }
 
