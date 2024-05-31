@@ -88,7 +88,7 @@ export const singlePostData = {
   id: 1,
   title: "Beautiful Apartment",
   price: 1200,
-  images: ["House", "luxBackyard.jpg", "luxKitchen.jpg", "luxBedroom.jpg"],
+  images: ["House.jpg", "luxBackyard.jpg", "luxKitchen.jpg", "luxBedroom.jpg"],
 
   bedrooms: 2,
   bathroom: 1,

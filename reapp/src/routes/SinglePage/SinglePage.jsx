@@ -1,6 +1,7 @@
 import "./singlepage.scss";
 import Slider2 from "../../components/slider/Slider2";
 import { singlePostData, userData } from "../../lib/dummydata";
+import Map from "../../components/map/Map";
 
 function SinglePage() {
   return (
@@ -23,12 +24,23 @@ function SinglePage() {
                 <span>{userData.name}</span>
               </div>
             </div>
-            <div className="bottom"></div>
+            <div className="bottom">{singlePostData.description}</div>
           </div>
         </div>
       </div>
       <div className="features">
-        <div className="wrapper"></div>
+        <div className="wrapper">
+          <p className="title">General</p>
+          <div className="listVertical"></div>
+          <p className="title">Room Sizes</p>
+          <div className="sizes"></div>
+          <p className="title">Nearby Places</p>
+          <div className="listHorizintal"></div>
+          <p className="title">Location</p>
+          <div className="mapContainer">
+            <Map />
+          </div>
+        </div>
       </div>
     </div>
   );
