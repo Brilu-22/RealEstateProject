@@ -13,10 +13,20 @@
           display: flex;
           justify-content: space-between;
           .post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             h1 {
+
+              font-weight: 400;
             }
 
             .address {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              color: #888;
+              font-size: 14px;
             }
             .price {
             }
